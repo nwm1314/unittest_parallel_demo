@@ -1,0 +1,7 @@
+"# unittest_parallel_demo" 
+
+项目说明：
+
+1.为了提升用例执行效率，使用multiprocessing库进程池并行用例，使用HTMLTestRunner_PY3生成HTML测试报告
+
+2.使用multiprocessing.Manager共享子进程之间的测试数据，GenerateHtmlReport对HTMLTestRunner_PY3做了部分修改，使其可以汇总生成多进程执行后的测试报告
