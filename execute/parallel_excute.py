@@ -4,6 +4,8 @@ import os
 import sys
 import unittest
 
+sys.append(sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
+
 from tools.GenerateHtmlReport import GenerateHtmlReport
 from tools.HTMLTestRunner import HTMLTestRunner
 
@@ -34,7 +36,6 @@ def do(suit, count_list, cls_list, rmap_list, path):
 
 
 if __name__ == '__main__':
-    sys.append(sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
     manage = multiprocessing.Manager()
     count_list = manage.list()
     cls_list = manage.list()
