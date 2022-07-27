@@ -1,6 +1,7 @@
 import datetime
 import multiprocessing
 import os
+import sys
 import unittest
 
 from tools.GenerateHtmlReport import GenerateHtmlReport
@@ -33,6 +34,7 @@ def do(suit, count_list, cls_list, rmap_list, path):
 
 
 if __name__ == '__main__':
+    sys.append(sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
     manage = multiprocessing.Manager()
     count_list = manage.list()
     cls_list = manage.list()
